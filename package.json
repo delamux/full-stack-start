@@ -1,0 +1,45 @@
+{
+  "name": "full-stack-start",
+  "version": "1.0.0",
+  "description": "Monorepo react and nodejs with express",
+  "main": "index.js",
+  "type": "module",
+  "workspaces": [
+    "packages/*"
+  ],
+  "scripts": {
+    "lint": "npm run lint --workspace=backend && npm run lint --workspace=frontend",
+    "lint:fix": "npm run lint -- --fix",
+    "prettify": "prettier \"./**/*.{js,jsx,json,css,ts,tsx}\" --write",
+    "test": "vitest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/delamux/full-stack-start.git"
+  },
+  "keywords": [
+    "monorepo",
+    "express",
+    "react"
+  ],
+  "author": "Luis del Amo",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/delamux/full-stack-start/issues"
+  },
+  "homepage": "https://github.com/delamux/full-stack-start#readme",
+  "dependencies": {
+
+  },
+  "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "^8.29.1",
+    "@typescript-eslint/parser": "^8.29.1",
+    "eslint": "^9.24.0",
+    "eslint-config-prettier": "^10.1.2",
+    "eslint-plugin-prettier": "^5.2.6",
+    "globals": "^16.0.0",
+    "prettier": "^3.5.3",
+    "typescript": "^5.8.3",
+    "vitest": "^3.1.1"
+  }
+}

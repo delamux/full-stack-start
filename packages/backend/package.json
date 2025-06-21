@@ -1,0 +1,45 @@
+{
+  "name": "backend",
+  "version": "1.0.0",
+  "description": "Start backend in nodejs",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "start": "node --env-file=../../.env  dist/main.js",
+    "dev": "tsx --env-file=../../.env watch src/main.ts",
+    "build": "tsc",
+    "test:unit": "vitest run --config ../../vitest.config.ts",
+    "test:integration": "vitest run --config vitest.config.integration.ts",
+    "test": "npm run test:integration && npm run test:unit",
+    "lint": "eslint src --ext ts,tsx --report-unused-disable-directives",
+    "lint:fix": "npm run lint -- --fix",
+    "prettify": "prettier \"./**/*.{js,jsx,json,css,ts,tsx}\" --write"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/delamux/nodejs-backend-start.git"
+  },
+  "keywords": [
+    "backend",
+    "nodejs",
+    "vitest",
+    "start",
+    "express",
+    "skeleton"
+  ],
+  "author": "Luis del Amo",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/delamux/nodejs-backend-start/issues"
+  },
+  "homepage": "https://github.com/delamux/nodejs-backend-start#readme",
+  "dependencies": {
+    "express": "^5.0.1"
+  },
+  "devDependencies": {
+    "@types/express": "^5.0.1",
+    "@types/node": "^22.14.0",
+    "supertest": "^7.1.0",
+    "tsx": "^4.19.3"
+  }
+}
